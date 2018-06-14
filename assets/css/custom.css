@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+body, input, button{
+    font-family: 'Roboto', sans-serif;
+}
+.header{
+    height: 80px;
+    padding: 15px;
+    z-index: 5;
+    background-color: #c6273a;
+    box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.5);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.header input{
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    box-shadow: none;
+    outline: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+}
+.header input[type=text]{
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 400;
+}
+.header input:focus{
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    box-shadow: none;
+}
+.header input::-webkit-input-placeholder{
+    color: rgba(255, 255, 255, 0.75);
+}
+.header input:-moz-placeholder{
+    color: rgba(255, 255, 255, 0.75);
+}
+.header input::-moz-placeholder{
+    color: rgba(255, 255, 255, 0.75);
+}
+.header input:-ms-input-placeholder{
+    color: rgba(255, 255, 255, 0.75);
+}
+.header .btn{
+    color: #c6273a;
+    background-color: #ffffff;
+}
+.app-body{
+    background-color: #edf0f1;
+    padding: 50px 5% 50px 5%;
+}
+.app-body ul.list-group#todo:empty::after{
+    content: "You have nothing in your to do list yet";
+}
+.app-body ul.list-group#completed:empty::after{
+    content: "You are yet to complete any tasks";
+}
+.app-body ul.list-group#todo:empty::after,
+.app-body ul.list-group#completed:empty::after{
+    display: block;
+    text-align: center;
+    margin: 15px 0 10px 0;
+}
+.app-body ul.list-group li.list-group-item{
+    border-radius: 5px;
+    margin-top:10px;
+    box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.10);
+}
+.app-body ul.list-group li.list-group-item>span>button{
+    border: none;
+    background-color: transparent;
+}
+.app-body ul.list-group li.list-group-item>span>button.remove{
+    color: #d6b3b9;
+}
+.app-body ul.list-group li.list-group-item>span>button.complete{
+    color: #63e8b3;
+}
+.app-body ul.list-group li.list-group-item>span>button:first-child{
+    border-right: 1px solid #edf0f1;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-right: -5px; 
+}
+.app-body ul.list-group li.list-group-item>span>button:hover, .app-body ul.list-group li.list-group-item>span>button:focus{
+    background: none;
+}
+.app-body ul.list-group li.list-group-item>span>button.remove:hover{
+    color: #e85656;
+}
+.app-body ul.list-group li.list-group-item>span>button.complete:hover{
+    color: #25b99a;
+}
